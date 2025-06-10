@@ -6,6 +6,10 @@
 
 }
 
+/* Jenis Tulisan */
+body {
+    font-family:"Montserrat", sans-serif;
+}
 .main-logo{
     height: 50px;
     width: 50px;
@@ -40,6 +44,25 @@ section {
     background-image: url(htps://picsum.photos/500);
     background-size: cover;
     background-position: center;
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+    .flex {
+        flex-direction: column;
+        background-color:rgb(153, 179, 7);
+        gap: 0;
+        align-items: flex-start;
+
+    }
+    h2 {
+        height: 25px;
+        margin-bottom: 0;
+    }
+    h3 {
+        height: 25px;
+        margin-bottom: 0;
+    }
 }
 
 /* Footer Component */
