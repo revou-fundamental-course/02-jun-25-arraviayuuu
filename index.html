@@ -10,9 +10,8 @@
     <!-- Jenis Tulisan-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+</head>
 <body>
     <!-- Header Content -->
     <header class="main-header"> 
@@ -58,23 +57,28 @@
             <p> If you have any questions, feel free to reach out </p>
 
         <form>
-            <label>Nama: </label>
-            <input type="text" name="nama" placeholder="Nama" rows='15' cols='15' />
+            <div class="form-row"></div>
+            <label for="name-input">Nama: </label>
+            <input type="text" id="name-input" placeholder="Nama"/>
+            </div>
             <br>
             <br>
-            <label>Tanggal Lahir: </label>
-            <input type="date" name="tanggal_lahir" rows='15' cols='15' />
+            <!-- <div class="form-row"></div> -->
+            <!-- <label for="tanggal-lahir">Tanggal Lahir: </label> -->
+            <!-- <input type="date" name="tanggal-lahir" /> -->
             <br>
-            <p>Jenis Kelamin: </p>
-               <input type="radio" name="jenis_kelamin" value="laki-laki" checked />
-               <label>Laki - Laki</label>
-               <input type="radio" name="jenis_kelamin" value="perempuan" />
-               <label>Perempuan</label>
-            <p> Pesan:</p>
-               <textarea name="jawaban" rows='10' cols='60' placeholder="Tulis pesan Anda di sini"></textarea>
+            <!-- <p>Jenis Kelamin: </p> -->
+            <!--   <input type="radio" name="jenis_kelamin" value="laki-laki" checked /> -->
+            <!--   <label>Laki - Laki</label> --> 
+            <!--  <input type="radio" name="jenis_kelamin" value="perempuan" /> --> 
+            <!--   <label>Perempuan</label> -->
+            <!-- <p> Pesan:</p> -->
+             <!-- <textarea name="jawaban" rows='10' cols='60' placeholder="Tulis pesan Anda di sini"></textarea> -->
         
-               <p><input type="submit" value="Submit"> </p>
-
+            <div>
+               <button type="button" onclick="validateForm()">Submit </button>
+            </div>
+ 
         </form>
          </section>
     </main>
@@ -83,5 +87,8 @@
     <footer>
         <p> &copy; 2025 Arravi Ayu. All right reserved. </p>
     </footer>
+
+    <!-- Javascript-->
+     <script src="js/script.js"></script>
 </body>
 </html>

@@ -57,23 +57,47 @@ section {
     background-position: center;
 }
 
-/* mobile */
-@media screen and (max-width: 767px) {
-    .flex {
-        flex-direction: column;
-        background-color:rgb(153, 179, 7);
-        gap: 0;
-        align-items: flex-start;
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
-    }
-    h2 {
-        height: 25px;
-        margin-bottom: 0;
-    }
-    h3 {
-        height: 25px;
-        margin-bottom: 0;
-    }
+.form-row label {
+  width: 150px;
+  margin-right: 10px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 8px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  header.main-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .banner-image, .our-profile {
+    height: 150px;
+  }
+
+  h1, p {
+    text-align: center;
+  }
 }
 
 /* Footer Component */
