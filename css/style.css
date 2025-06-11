@@ -9,6 +9,10 @@
 /* Jenis Tulisan */
 body {
     font-family:"Montserrat", sans-serif;
+    background-color:bisque;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
 }
 .main-logo{
     height: 50px;
@@ -39,9 +43,16 @@ section {
     height: 500px;
 }
 
-.banner-img{
-    height: 350px;
-    background-image: url(htps://picsum.photos/500);
+.banner-image{
+    height: 400px;
+    background-image: url(https://picsum.photos/500);
+    background-size: cover;
+    background-position: center;
+}
+
+.our-profile{
+    height: 400px;
+    background-image: url(https://picsum.photos/500);
     background-size: cover;
     background-position: center;
 }
