@@ -2,20 +2,22 @@
 .main-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* Jenis Tulisan */
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: bisque;
+  background-color: rgb(9, 128, 78);
+  color: rgb(253, 253, 249);
   height: 400px;
   background-size: cover;
   background-position: center;
 }
 .main-logo {
-  height: 50px;
-  width: 50px;
-  background-image: url(https://picsum.photos/200);
+  height: 125px;
+  width: 125px;
+  background-image: url(../assets/BG\ Main\ Logo.png);
   border-radius: 50%;
   background-size: cover;
   background-position: center;
@@ -31,7 +33,7 @@ nav {
 nav > a {
   border: 1px solid;
   padding: 10px;
-  color: black;
+  color: rgb(253, 252, 252);
   text-decoration: none;
   border-radius: 4px;
 }
@@ -42,9 +44,23 @@ section {
 }
 
 .banner-image {
-  height: 350px;
+  position: relative;
+  height: 450px;
   background-size: cover;
   background-position: center;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5); /* supaya lebih kontras */
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 2;
 }
 
 .image-1 {
@@ -59,52 +75,158 @@ section {
   background-image: url(../assets/3.jpg);
 }
 
-.form-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+/* Profile Section Styles */
+.profile-section {
+  background-image: url(../assets/4.jpg);
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
 }
 
-.form-row label {
-  width: 150px;
-  margin-right: 10px;
+.profile-container {
+  background-color: rgba(0, 0, 0, 0.5); /* biar teks lebih kontras */
+  padding: 30px;
+  border-radius: 10px;
+  display: inline-block;
 }
 
-.form-row input {
+.profile-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: hwb(40 97% 2%);
+}
+
+.about-cafe p {
+  margin-bottom: 20px;
+  color: hwb(41 4% 17%);
   flex: 1;
-  padding: 8px;
+  background-color: #f9f9f9;
+  padding: 60px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 60px;
+  margin-top: 40px;
+  text-align: justify;
 }
 
-/* mobile */
-@media (max-width: 768px) {
-  header.main-header {
-    flex-direction: column;
-    align-items: flex-start;
+/* MessageUs Section Styles */
+.messageus-section {
+  padding: 60px 0;
+  background-color: rgb(17, 17, 17, 0.5);
+}
+
+.messageus-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: lab(98.15% 1 0.34);
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.514);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: none;
+}
+
+button[type="submit"] {
+  background-color: hwb(41 4% 17%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(43, 104, 164);
+}
+
+.form-result {
+  max-width: 600px;
+  margin: 30px auto 0;
+  padding: 20px;
+  background-color: #e8f4fc;
+  border-radius: 5px;
+  display: none;
+}
+
+/* Style dasar untuk semua layar */
+#profile {
+  background-color: #f0f0f0;
+  padding: 50px 0;
+}
+
+/* Tablet (lebar maksimal 991px) */
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 90%;
+    padding: 0 15px;
   }
 
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+  h2 {
+    font-size: 24px;
+  }
+}
+
+/* HP (lebar maksimal 600px) */
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 95%;
+    padding: 0 10px;
   }
 
-  form {
-    width: 90%;
-  }
-
-  .banner-image,
-  .our-profile {
-    height: 150px;
-  }
-
-  h1,
-  p {
+  h2 {
+    font-size: 20px;
     text-align: center;
   }
-}
 
-/* Footer Component */
+  form input[type="submit"] {
+    font-size: 16px;
+  }
+}
+</style>
+
+/* Footer Styles */
 footer {
-  text-align: center;
+  background-color: rgb(9, 128, 78);
+  color: white;
+  text-align: right;
 }
