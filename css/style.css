@@ -1,60 +1,62 @@
-
 /* Header Component */
-.main-header{
-    display: flex;
-    justify-content: space-between;
-
+.main-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Jenis Tulisan */
 body {
-    font-family:"Montserrat", sans-serif;
-    background-color:bisque;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: bisque;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
 }
-.main-logo{
-    height: 50px;
-    width: 50px;
-    background-image: url(https://picsum.photos/200);
-    border-radius: 50%; 
-    background-size: cover;
-    background-position: center;
+.main-logo {
+  height: 50px;
+  width: 50px;
+  background-image: url(https://picsum.photos/200);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
 }
 /* Header Component */
 
 /* NavBar Component */
 nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 nav > a {
-    border: 1px solid;
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-    border-radius: 4px;
+  border: 1px solid;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
 }
 /* NavBar Component */
 
 section {
-    height: 500px;
+  height: 500px;
 }
 
-.banner-image{
-    height: 400px;
-    background-image: url(https://picsum.photos/500);
-    background-size: cover;
-    background-position: center;
+.banner-image {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
 }
 
-.our-profile{
-    height: 400px;
-    background-image: url(https://picsum.photos/500);
-    background-size: cover;
-    background-position: center;
+.image-1 {
+  background-image: url(../assets/1.jpg);
+}
+
+.image-2 {
+  background-image: url(../assets/2.jpg);
+}
+
+.image-3 {
+  background-image: url(../assets/3.jpg);
 }
 
 .form-row {
@@ -91,16 +93,18 @@ section {
     width: 90%;
   }
 
-  .banner-image, .our-profile {
+  .banner-image,
+  .our-profile {
     height: 150px;
   }
 
-  h1, p {
+  h1,
+  p {
     text-align: center;
   }
 }
 
 /* Footer Component */
 footer {
-    text-align: center;
+  text-align: center;
 }

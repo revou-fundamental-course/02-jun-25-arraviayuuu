@@ -1,7 +1,7 @@
 console.log("Javascript is Running");
 
 function validateForm() {
-  console.log("Validate Form is Calling");
+  // Ambil DOM dari Id "name-input" di HTML
   const nameInput = document.getElementById("name-input");
   console.log(nameInput.value);
   if (nameInput.value == "") {
@@ -12,3 +12,33 @@ function validateForm() {
     alert(`Hai ${nameInput.value}`);
   }
 }
+
+let indexBanner = 0;
+
+showBanner();
+
+// increment index
+function nextBanner() {
+  indexBanner += 1;
+  showBanner();
+}
+
+function showBanner() {
+  // DOM Banner
+  const listImage = document.getElementsByClassName("banner-image");
+
+  //reset index
+  if (indexBanner > listImage.length - 1) {
+    indexBanner = 0;
+  }
+
+  //lopping to hide all banner
+  for (let i = 0; i < listImage.length; i++) {
+    listImage[i].style.display = "none";
+  }
+
+  listImage[indexBanner].style.display = "block";
+  console.log(listImage);
+}
+
+setInterval(nextBanner, 3000);
